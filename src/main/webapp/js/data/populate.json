@@ -1,0 +1,55 @@
+{  
+   "policyHolder":{  
+      "title":"Mr",
+      "firstName":"France",
+      "lastName":"Andrade",
+      "address":"8 Moor Place, East Southbourne and Tuckton W",
+      "postalCode":"BH6 3BE",
+      "country":"UK",
+      "email":"France.Andrade@gmail.com",
+      "telephoneNo":"01347-368222",
+      "annualTurnover":"400000",
+      "businessName" :"France Andrade Legal Consultation"
+   },
+   "representative":{  
+      "title":"Mr",
+      "firstName":"Svetlana",
+      "lastName":"Tauras",
+      "address":"8289 Cadogan St, South Ward",
+      "postalCode":"DN33 1AU",
+      "country":"India",
+      "email":"Svetlana.Tauras@gmail.com",
+      "telephoneNo":"01781-827317"
+   },
+   "policyProviderContact":{
+      "title":"Mr",
+      "firstName":"Domonique",
+      "lastName":"Sandlin",
+      "address":"95 Denton St, Wollaton West Ward",
+      "state":"Nottinghamshire",
+      "country":"UK",
+      "postalCode":"NG8 2NB",
+      "telephoneNo":"01355-500797",
+      "email":"domonique@yardmanagement.com"
+   },
+   "policyDetail":{  
+      "insuranceType":"Marine",
+      "registrationNumber":"45435550",
+      "insurancePolicyStart":"31/01/2016",
+      "policyNumber":"Lloyds1001",
+      "syndicate":"Canopius Managing Agents Limited"
+   },
+   "complaintDetail":{
+      "complaintsTo":"Lelia",
+      "isRelateToClaim":false,
+      "claimNumber":"92299",
+      "claimOccurDate":"07/12/2012",
+      "contactedFOS":true,
+      "fosReference":"FS-92302",
+      "summary":"Endorsement Requested",
+      "expectedResponse":"Expecting endorsement initiation response"
+   },
+   "policyData":{  
+      "date":"01/20/2016"
+   } 
+}
