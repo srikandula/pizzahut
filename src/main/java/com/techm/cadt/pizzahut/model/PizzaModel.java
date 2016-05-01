@@ -1,4 +1,4 @@
-package com.techm.cadt.foodpanda.model;
+package com.techm.cadt.pizzahut.model;
 
 public class PizzaModel extends ID {
 	

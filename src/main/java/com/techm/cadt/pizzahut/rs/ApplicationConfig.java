@@ -1,4 +1,4 @@
-package com.techm.cadt.foodpanda.rs;
+package com.techm.cadt.pizzahut.rs;
 
 import java.util.Set;
 import javax.ws.rs.core.Application;
@@ -26,8 +26,8 @@ public class ApplicationConfig extends Application {
      * @param resources Accept resource classes
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
-        resources.add(com.techm.cadt.foodpanda.rs.MenuResource.class);
-        resources.add(com.techm.cadt.foodpanda.rs.filter.CrossOriginResourceSharingFilter.class);
+        resources.add(com.techm.cadt.pizzahut.rs.MenuResource.class);
+        resources.add(com.techm.cadt.pizzahut.rs.filter.CrossOriginResourceSharingFilter.class);
     }
 
 }

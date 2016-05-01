@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.techm.cadt.foodpanda.model;
+package com.techm.cadt.pizzahut.model;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -14,12 +14,13 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 public class MenuItem {
     
+	public int   id;
     public String itemName;
     public String size;
     public String[] topings;
-    public boolean isVeg;
+    public String isVeg;
     
-    public boolean isThinCrest;
+    public String isThinCrest;
     public int cost;
     
     
@@ -27,8 +28,9 @@ public class MenuItem {
         
     }
 
-    public MenuItem(String itemName, String size, boolean isThinCrest,
-             int cost, boolean isVeg, String[] topings) {
+    public MenuItem(int id,String itemName, String size, String isThinCrest,
+             int cost, String isVeg, String[] topings) {
+    	this.id  = id;
         this.itemName = itemName;
         this.size = size;
         this.topings = topings;
@@ -37,7 +39,24 @@ public class MenuItem {
         this.cost = cost;
     }
 
-    public String getItemName() {
+    
+    public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getIsVeg() {
+		return isVeg;
+	}
+
+	public String getIsThinCrest() {
+		return isThinCrest;
+	}
+
+	public String getItemName() {
         return itemName;
     }
     
@@ -63,21 +82,21 @@ public class MenuItem {
         this.topings = topings;
     }
 
-    public boolean isIsThinCrest() {
+    public String isIsThinCrest() {
         return isThinCrest;
     }
 
     
-    public void setIsThinCrest(boolean isThinCrest) {
+    public void setIsThinCrest(String isThinCrest) {
         this.isThinCrest = isThinCrest;
     }
 
-    public boolean isIsVeg() {
+    public String isIsVeg() {
         return isVeg;
     }
 
     
-    public void setIsVeg(boolean isVeg) {
+    public void setIsVeg(String isVeg) {
         this.isVeg = isVeg;
     }
     

@@ -1,4 +1,4 @@
-package com.techm.cadt.foodpanda.rs;
+package com.techm.cadt.pizzahut.rs;
 
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.UriInfo;
@@ -9,9 +9,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PUT;
 import javax.ws.rs.core.MediaType;
 
-import com.techm.cadt.foodpanda.db.PizzaDAO;
-import com.techm.cadt.foodpanda.model.Menu;
-import com.techm.cadt.foodpanda.model.MenuItem;
+import com.techm.cadt.pizzahut.db.PizzaDAO;
+import com.techm.cadt.pizzahut.model.Menu;
+import com.techm.cadt.pizzahut.model.MenuItem;
 
 import javax.ws.rs.QueryParam;
 
@@ -20,8 +20,10 @@ import javax.ws.rs.QueryParam;
  *
  * @author SK69016
  */
-@Path("menu")
+@Path("/")
 public class MenuResource {
+
+	PizzaDAO dao = new PizzaDAO();
 
     @Context
     private UriInfo context;
@@ -38,14 +40,10 @@ public class MenuResource {
      */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @Path("menu")
     public Menu getMenu() {
-        Menu menu = PizzaDAO.loadMenu();
-        try{
-        	System.out.println("...About to sleep");
-        	System.out.println("...Ready");
-        }catch(Exception ex){
-
-        }
+    	//System.out.println("Menu RS");
+        Menu menu = dao.loadMenu();
         return menu;
     }
 
@@ -63,8 +61,9 @@ public class MenuResource {
     public Menu queryMenu(
             @QueryParam("size")String size,
             @QueryParam("isVeg")String isVeg,
-            @QueryParam("cost")String cost) {
-        Menu menu = PizzaDAO.filterMenu(size,isVeg,cost);
+            @QueryParam("cost")int cost) {
+    	//System.out.println("Query RS....");
+        Menu menu = dao.filterMenu(size,isVeg,cost);
         return menu;
     }
 
@@ -76,6 +75,7 @@ public class MenuResource {
     @Consumes(MediaType.APPLICATION_JSON)
     public void orderItem(MenuItem item) {
         System.out.println(item.getItemName());
-        PizzaDAO.saveOrder(item);
+        //PizzaDAO dao = new PizzaDAO();
+        dao.saveOrder(item);
     }
 }
