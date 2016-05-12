@@ -1,24 +1,11 @@
-# Login as mysql user
-# mysql -u root
-
-# Create pizzauser with password as techm123 
-CREATE USER 'pizzauser'@'localhost' IDENTIFIED BY 'techm123';
-GRANT ALL PRIVILEGES ON *.* TO 'pizzauser'@'localhost'   WITH GRANT OPTION;
-CREATE USER 'pizzauser'@'%' IDENTIFIED BY 'techm123';
-GRANT ALL PRIVILEGES ON *.* TO 'pizzauser'@'%'  WITH GRANT OPTION;
-FLUSH PRIVILEGES;
-exit;
-
-
-# Verify user login credentials
-mysql -u pizzauser -ptechm123
-SELECT USER(),CURRENT_USER();
+#mysql -u pizzauser -ptechm123
+#SELECT USER(),CURRENT_USER();
 
 # Login as pizzauser and create database and tables
-create database pizzahut;
+create database if not exists pizzahut;
 use pizzahut;
 
-DROP TABLE menu_item;
+#DROP TABLE menu_item;
 
 CREATE TABLE menu_item(
    menu_id       INT NOT NULL,
